@@ -24,7 +24,7 @@ public class MyFirstJava {
 
         //System.out.println("Your name is " + firstName + " and your age is " + userAge);
 
-        //System.out.println("Your name is " + firstName + "\n and your age is " + userAge);
+        System.out.println("Your name is " + firstName + "\n and your age is " + userAge);
 
         if (userAge > 18) {
 
