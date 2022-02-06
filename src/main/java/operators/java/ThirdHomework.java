@@ -52,16 +52,16 @@ public class ThirdHomework {
         System.out.println("=============Beginning of fourth task=============");
         System.out.println("Now, I will ask you to enter three different whole numbers and I will tell you which is the greatest one of them!");
         System.out.println("Enter your first number:");
-        int firtsNumber = scanner.nextInt();
+        int firstNumber = scanner.nextInt();
         System.out.println("Enter your second number:");
         int secondNumber = scanner.nextInt();
         System.out.println("Enter your third number:");
         int thirdNumber = scanner.nextInt();
 
-        if ((firtsNumber == secondNumber) && (secondNumber == thirdNumber)){
+        if ((firstNumber == secondNumber) && (secondNumber == thirdNumber)){
             System.out.println("All entered numbers are the same.");
-        }else if(firtsNumber > secondNumber){
-            if (firtsNumber > thirdNumber) {
+        }else if(firstNumber > secondNumber){
+            if (firstNumber > thirdNumber) {
                 System.out.println("The first entered number is the greatest one.");
             } else {
                 System.out.println("The third entered number is the greatest one.");
