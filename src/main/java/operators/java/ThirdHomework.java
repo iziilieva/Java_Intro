@@ -13,11 +13,12 @@ public class ThirdHomework {
         System.out.println("Enter a number between 1 and 7 and I will tell you which day of the week it is:");
         int enteredNumber = scanner.nextInt();
         printDayOfTheWeek(enteredNumber);
-        System.out.println("=============End of first task=============");
-        System.out.println("=============Beginning of second task=============");
+        System.out.println("=============End of first task=============" + "\n");
+
 
 
         //Second task
+        System.out.println("=============Beginning of second task=============");
         System.out.println("Now I will calculate the area and the perimeter of a rectangle!");
         System.out.println("Enter the length of the rectangle:");
         double length = scanner.nextDouble();
@@ -27,11 +28,12 @@ public class ThirdHomework {
         double perimeter = (2 * (length + width));
         System.out.println("The area of the rectangle is " + area);
         System.out.println("The area of the rectangle is " + perimeter);
-        System.out.println("=============End of second task=============");
-        System.out.println("=============Beginning of third task=============");
+        System.out.println("=============End of second task=============" + "\n");
+
 
 
         //Third task
+        System.out.println("=============Beginning of third task=============");
         System.out.println("Enter random whole number and I will guess if positive or negative:");
         int randomNumber = scanner.nextInt();
 
@@ -42,11 +44,12 @@ public class ThirdHomework {
         } else {
             System.out.println("Entered number is 0");
             }
-        System.out.println("=============End of third task=============");
-        System.out.println("=============Beginning of fourth task=============");
+        System.out.println("=============End of third task=============" + "\n");
+
 
 
         //Fourth task
+        System.out.println("=============Beginning of fourth task=============");
         System.out.println("Now, I will ask you to enter three different whole numbers and I will tell you which is the greatest one of them!");
         System.out.println("Enter your first number:");
         int firtsNumber = scanner.nextInt();
