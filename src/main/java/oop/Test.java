@@ -36,6 +36,9 @@ public class Test {
         parrot.setAddress(parrotAddress);
         parrot.setBarcode(12345);
         parrot.printData();
+        Breed ara = new Breed( "Ara");
+        Breed bara = new Breed( "Bara");
+
 
 //        Parrot parrot2 = new Parrot();
 //        Address parrot2Address = new Address();
@@ -54,6 +57,17 @@ public class Test {
 
         frenchie.run();
         parrot.run();
+
+
+        System.out.println(parrot.isExpensive(ara));
+        System.out.println(parrot.isExpensive(bara));
+        System.out.println(parrot.isExpensive());
+
+        if (parrot.isExpensive()){
+            System.out.println("You can't buy it.");
+        } else {
+            System.out.println("You can buy it.");
+        }
 
 
     }
