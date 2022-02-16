@@ -1,6 +1,6 @@
 package oop;
 
-public class Parrot extends Pet {
+public class Parrot extends Pet{
 
     public Parrot(boolean hasTail, String name, int age, Breed breed, Address address) {
         super(hasTail, name, age, breed, address);
@@ -8,38 +8,30 @@ public class Parrot extends Pet {
 
     @Override
     public void run() {
-        System.out.println(super.getName() + " is flying.");
+        System.out.println(super.getName() + " is flying...");
     }
 
 //    public void talk(){
-//
-//        System.out.println("I can talk");
+//        System.out.println("I can talks");
 //    }
 
-    public boolean isExpensive(Breed breed) {
-
-        boolean result = false;
-        switch(breed.getBreedName()){
-            case "Ara":
-                result = true;
-                break;
-            case "Mini":
-                result = false;
-                break;
-            default:
-                result = false;
+    public boolean isExpensive(Breed breed){
+        if (breed.getBreedName().equals("Ara")){
+            return true;
+        }else {
+            return false;
         }
-        return result;
     }
 
-//method overload
-    public boolean isExpensive() {
+    //method overload
+    public boolean isExpensive(){
         if (super.getBreed().getBreedName().equals("Ara")){
             return true;
         }else {
             return false;
         }
-
     }
+
+
 }
 

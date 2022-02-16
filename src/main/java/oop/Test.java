@@ -2,42 +2,40 @@ package oop;
 
 public class Test {
     public static void main(String[] args) {
-        Dog frenchie = new Dog();  //default constructor
+        Dog frenchie = new Dog(); //default constructor
         Address dogAddress = new Address();
         dogAddress.setCity("Sofia");
-        dogAddress.setStreetName("Alabala");
         dogAddress.setPostalCode(1000);
+        dogAddress.setStreetName("Some street name");
         frenchie.printData();
 
         frenchie.setAge(2);
         Breed frBulldog = new Breed("French Bulldog");
-        frenchie.setBreed(new Breed("French Bulldog")); //calling a method with parameter which is new object  of type Breed
-        frenchie.setBreed(frBulldog); // calling a method with parameter with an object  (same as above)
+        frenchie.setBreed(new Breed("French Bulldog")); //calling a method with parameter which is new object of type Breed
+        frenchie.setBreed(frBulldog); //calling a method with parameter with an object (same as above)
         frenchie.setHasTail(false);
         frenchie.setName("Morti");
-        frenchie.setAddress(dogAddress);  //Dog has Address
+        frenchie.setAddress(dogAddress); //Dog has Address
         frenchie.printData();
 
         Dog huscky = new Dog(true, "Sara", 6, new Breed("Hucky"), dogAddress); //constructor with parameters
         huscky.printData();
 
-//        Parrot parrot = new Parrot();
-        Address parrotAddress = new Address();
-        parrotAddress.setCity("Sofia");
-        parrotAddress.setStreetName("Alabala");
-        parrotAddress.setPostalCode(1000);
-        Parrot parrot = new Parrot(true, "Poly", 12, new Breed("Ara"), parrotAddress);
-//        parrot.printData();
 
-        parrot.setAge(12);
-        parrot.setBreed(new Breed("Ara"));
-        parrot.setHasTail(true);
-        parrot.setName("Poli");
-        parrot.setAddress(parrotAddress);
-        parrot.setBarcode(12345);
-        parrot.printData();
-        Breed ara = new Breed( "Ara");
-        Breed bara = new Breed( "Bara");
+        Address parrotAddress = new Address();
+        parrotAddress.setStreetName("some street");
+        parrotAddress.setCity("some city");
+        parrotAddress.setPostalCode(12345);
+        Parrot parrotAra = new Parrot(true, "Poly", 12, new Breed("Ara"), parrotAddress);
+
+        parrotAra.setAge(12);
+        parrotAra.setBreed(new Breed("Ara"));
+        parrotAra.setHasTail(true);
+        parrotAra.setName("Poly");
+        parrotAra.setAddress(parrotAddress);
+        parrotAra.printData();
+        Breed ara = new Breed("Ara");
+        Breed small = new Breed("Small");
 
 
 //        Parrot parrot2 = new Parrot();
@@ -53,22 +51,18 @@ public class Test {
 //        parrot2.setAddress(parrotAddress);
 //        parrot2.printData();
 
-        System.out.println(parrot.isHasTail());
+        System.out.println(parrotAra.isHasTail());
 
         frenchie.run();
-        parrot.run();
+        parrotAra.run();
 
+        System.out.println(parrotAra.isExpensive(ara));
+        System.out.println(parrotAra.isExpensive(small));
 
-        System.out.println(parrot.isExpensive(ara));
-        System.out.println(parrot.isExpensive(bara));
-        System.out.println(parrot.isExpensive());
-
-        if (parrot.isExpensive()){
-            System.out.println("You can't buy it.");
-        } else {
-            System.out.println("You can buy it.");
+        if (parrotAra.isExpensive()){
+            System.out.println("You can`t buy that!");
+        }else {
+            System.out.println("You can buy one!");
         }
-
-
     }
 }
