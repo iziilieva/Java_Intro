@@ -17,7 +17,6 @@ public class Person {
         }else {
             System.out.println("Invalid person name!");
         }
-
     }
 
     public double getMoney() {
