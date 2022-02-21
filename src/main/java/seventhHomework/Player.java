@@ -90,7 +90,6 @@ public class Player {
         this.setPlayerShooting(playerShooting);
 
 //        System.out.printf("%s overall skill level is %f \n", this.getPlayerName(), overallSkillLevel());
-
     }
 
     public double overallSkillLevel() {
@@ -100,5 +99,4 @@ public class Player {
     public boolean isValid(){
         return playerEndurance != -1 && playerSprint != -1 && playerDribble != -1 && playerPassing != -1 && playerShooting != -1;
     }
-
 }

@@ -23,21 +23,6 @@ public class Team {
         return players;
     }
 
-    public void getTeamRating() {
-        double totalScore = 0;
-        double averageScore = 0;
-
-        if (this.players.size() != 0) {
-
-            for (int i = 0; i < this.players.size(); i++) {
-
-                totalScore += this.players.get(i).overallSkillLevel();
-            }
-            averageScore = totalScore / this.players.size();
-        }
-        System.out.printf("%s - %.0f", teamName, averageScore);
-    }
-
     public Team(String teamName) {
         this.setTeamName(teamName);
 //        System.out.println("Team name is " + teamName);
@@ -55,5 +40,20 @@ public class Team {
         }else {
             this.players.remove(player);
         }
+    }
+
+    public void getTeamRating() {
+        double totalScore = 0;
+        double averageScore = 0;
+
+        if (this.players.size() != 0) {
+
+            for (int i = 0; i < this.players.size(); i++) {
+
+                totalScore += this.players.get(i).overallSkillLevel();
+            }
+            averageScore = totalScore / this.players.size();
+        }
+        System.out.printf("%s - %.0f", teamName, averageScore);
     }
 }
